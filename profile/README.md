@@ -1,6 +1,6 @@
 <div align="center">
 
-# revenue●
+# RevenueDot
 
 **The open-source RevenueCat alternative.**<br>
 Self-hosted in-app purchase and subscription infrastructure for iOS, Android, React Native, Flutter and the web.<br>
