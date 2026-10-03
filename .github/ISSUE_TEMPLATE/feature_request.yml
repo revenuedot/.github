@@ -1,0 +1,35 @@
+name: Feature request
+description: Something RevenueDot should do, or a RevenueCat feature it should match.
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: The problem
+      description: What you are trying to do and what stops you today.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What you would like
+      description: If RevenueCat, Superwall or another tool already does it, link its docs so we match the behaviour.
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Stores (App Store, Google Play, Amazon, Stripe, Paddle, Roku, Galaxy)
+        - SDKs
+        - Paywalls, experiments, targeting
+        - Web checkout and funnels
+        - Customer Center, refunds, win-back, payment recovery
+        - Charts and analytics
+        - Integrations and webhooks
+        - Dashboard
+        - Self-hosting and operations
+        - AI (MCP, skills, RevenueDot AI)
+        - Enterprise (SSO, SCIM, roles, data location)
+        - Docs and examples

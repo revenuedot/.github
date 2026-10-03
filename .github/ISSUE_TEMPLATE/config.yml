@@ -1,0 +1,14 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Question or help
+    url: https://github.com/revenuedot/revenuedot/discussions
+    about: Ask in Discussions. Migration, setup and "does it do X" questions get answered there.
+  - name: Security vulnerability
+    url: https://github.com/revenuedot/.github/blob/main/SECURITY.md
+    about: Email security@revenuedot.app. Please do not open a public issue.
+  - name: Documentation
+    url: https://revenuedot.app/docs
+    about: Guides, API reference, SDK guides, migration from RevenueCat and self-hosting.
+  - name: Talk to us
+    url: https://revenuedot.app/contact-sales
+    about: Enterprise, migration help, or a call with the founder.
