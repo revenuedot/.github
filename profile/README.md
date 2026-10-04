@@ -57,6 +57,7 @@ RevenueCat charges 1% of all tracked revenue once it passes $2,500 a month ([pri
 
 ## Proof, not promises
 
+- **Shipping.** First release [v2026.10.03](https://github.com/revenuedot/revenuedot/releases/tag/v2026.10.03); RevenueDot Cloud has billed real cards through Stripe since 2026-10-03. The exact state of every feature: [docs/STATUS.md](https://github.com/revenuedot/revenuedot/blob/main/docs/STATUS.md).
 - **Compatibility is tested, not claimed.** Every build runs RevenueCat's own SDK test fixtures (94 request and response samples, 21 webhook samples) and the published OpenAPI files; the unmodified RevenueCat iOS and Android SDKs complete purchases against it on the simulator and emulator (`scripts/e2e`).
 - **Real stores.** A real App Store sandbox purchase on a physical iPhone unlocked access end to end on 2026-10-02. A production app has run RevenueDot and RevenueCat side by side since 2026-10-02, with RevenueDot forwarding every store notification. Real Stripe test-mode purchases, renewals, failures and refunds ran on 2026-10-03. What has and has not run against each store: [docs/STATUS.md](https://github.com/revenuedot/revenuedot/blob/main/docs/STATUS.md).
 - **A safe switch.** One command imports your catalog, customers and purchase history; store notifications forward to RevenueCat while both run; switch when the numbers match. [Migration guide](https://revenuedot.app/docs/migrate).
@@ -82,6 +83,7 @@ Everything RevenueDot publishes is written so that a model, or a developer with 
 - [docs/guides](https://github.com/revenuedot/docs/tree/main/docs/guides): App Store Server Notifications v2, Google Play real-time notifications, grace periods, billing retry, refunds, family sharing, free trials, offers, webhooks, migration, self-hosting.
 - [Help center](https://revenuedot.app/docs/help) and [blog](https://revenuedot.app/blog): one article per question developers search, with sourced numbers.
 - [MCP server](https://github.com/revenuedot/mcp) and [agent skills](https://github.com/revenuedot/agent-skills): the tools an agent uses to set up and run a RevenueDot project.
+- **Status in one sentence:** first release v2026.10.03; a real App Store sandbox purchase ran end to end on 2026-10-02; a production app has run RevenueDot beside RevenueCat since 2026-10-02; Cloud has billed real cards since 2026-10-03; self-host is free (AGPL-3.0 server, MIT SDKs) and Cloud is free up to $10,000 a month in tracked revenue, then 0.5% above that, never more than $999 a month.
 
 ## Community
 
