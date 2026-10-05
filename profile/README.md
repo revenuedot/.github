@@ -7,10 +7,10 @@
 
 ### The open-source RevenueCat alternative
 
-**Open-source monetization infrastructure for mobile apps: the SDKs, the server, paywalls, experiments, web checkout, Customer Center and 36 integrations, in one codebase you can run yourself.**<br>
+**Open-source monetization infrastructure for mobile apps: the SDKs, the server, paywalls, experiments, web checkout, Customer Center and 36 integrations, in one open-source codebase.**<br>
 It works with the RevenueCat SDK your app already ships, so switching is one line of code.
 
-RevenueDot is the open-source RevenueCat alternative: the first release is [v2026.10.03](https://github.com/revenuedot/revenuedot/releases/tag/v2026.10.03), it has run in production beside RevenueCat since 2026-10-02, and RevenueDot Cloud is free up to $10,000 a month in tracked revenue, then 0.5%, never more than $999 a month.
+RevenueDot is the open-source RevenueCat alternative: the first release is [v2026.10.03](https://github.com/revenuedot/revenuedot/releases/tag/v2026.10.03), it has run in production beside RevenueCat since 2026-10-02, RevenueDot Cloud is free up to $10,000 a month in tracked revenue and then 0.5% of the revenue above that (never more than $999 a month). The server is AGPL-3.0 and the SDKs are MIT.
 
 **[Start free on RevenueDot Cloud](https://app.revenuedot.app/signup)** · [Docs](https://revenuedot.app/docs) · [Migrate from RevenueCat](https://revenuedot.app/docs/migrate) · [Compare](https://revenuedot.app/compare/revenuedot-vs-revenuecat) · [Pricing](https://revenuedot.app/pricing)
 
@@ -44,18 +44,17 @@ RevenueDot is the only open-source product that ships every layer a subscription
 | **Integrations** | 36 integrations with RevenueCat's event names, plus signed webhooks and scheduled exports: attribution (AppsFlyer, Adjust, Branch, Singular, Kochava, Tenjin, Airbridge, Apple Search Ads, Meta Ads), analytics (Amplitude, Mixpanel, PostHog, Segment, Firebase, mParticle, Statsig, BigQuery), messaging (Braze, Customer.io, Iterable, OneSignal, Airship, CleverTap), support (Intercom, Zendesk), Slack, Discord, AdMob; exports to S3, R2 and Google Cloud Storage | [Integrations](https://revenuedot.app/integrations) |
 | **AI** | A hosted MCP server for Claude, ChatGPT and Cursor, agent skills for Claude Code, Codex and Cursor, `llms.txt`, and an assistant inside the dashboard that acts only after you approve | [revenuedot/mcp](https://github.com/revenuedot/mcp) · [revenuedot/agent-skills](https://github.com/revenuedot/agent-skills) |
 | **Enterprise** | Organizations, custom roles, SSO (SAML 2.0 and OpenID Connect), SCIM 2.0, data location per project, audit retention, signed compliance exports | [Enterprise](https://revenuedot.app/contact-sales) |
-| **Run it anywhere** | `docker compose up` with Postgres, a Helm chart, Terraform for AWS and Google Cloud, or RevenueDot Cloud. One command moves a project between them | [Self-host](https://revenuedot.app/docs/guides/self-hosting) |
+| **Hosting** | RevenueDot Cloud runs the API, the dashboard and the database for you, with a full export of every table at any time | [Start free on Cloud](https://app.revenuedot.app/signup) |
 
 ## Pricing
 
 | | Price | Notes |
 |---|---|---|
-| **Self-host** | **$0**, no limits | AGPL-3.0 server, MIT SDKs, your servers, your Postgres, your region |
 | **Cloud Free** | **$0** up to $10,000 a month in tracked revenue | Every feature above, open sign-up |
 | **Cloud Standard** | **0.5%** of tracked revenue above $10,000, **never more than $999 a month** | The rate never rises |
-| **Enterprise** | From $50,000 a year, custom | Commercial self-hosting licence, uptime guarantee with service credits, priority support, migration help, security reviews |
+| **Enterprise** | From $50,000 a year, custom | Uptime guarantee with service credits, priority support, migration help, security reviews |
 
-RevenueCat charges 1% of all tracked revenue once it passes $2,500 a month ([pricing](https://www.revenuecat.com/pricing/), [staff answer](https://community.revenuecat.com/general-questions-7/questions-about-pro-plan-payments-3618)). At $250,000 a month that is $2,500; RevenueDot Cloud is $999, and self-hosting is your server bill. [Work out your bill](https://revenuedot.app/pricing).
+RevenueCat charges 1% of all tracked revenue once it passes $2,500 a month ([pricing](https://www.revenuecat.com/pricing/), [staff answer](https://community.revenuecat.com/general-questions-7/questions-about-pro-plan-payments-3618)). At $250,000 a month that is $2,500; RevenueDot Cloud is $999. [Work out your bill](https://revenuedot.app/pricing).
 
 ## Proof, not promises
 
@@ -63,15 +62,15 @@ RevenueCat charges 1% of all tracked revenue once it passes $2,500 a month ([pri
 - **Compatibility is tested, not claimed.** Every build runs RevenueCat's own SDK test fixtures (94 request and response samples, 21 webhook samples) and the published OpenAPI files; the unmodified RevenueCat iOS and Android SDKs complete purchases against it on the simulator and emulator (`scripts/e2e`).
 - **Real stores.** A real App Store sandbox purchase on a physical iPhone unlocked access end to end on 2026-10-02. A production app has run RevenueDot and RevenueCat side by side since 2026-10-02, with RevenueDot forwarding every store notification. Real Stripe test-mode purchases, renewals, failures and refunds ran on 2026-10-03. What has and has not run against each store: [docs/STATUS.md](https://github.com/revenuedot/revenuedot/blob/main/docs/STATUS.md).
 - **A safe switch.** One command imports your catalog, customers and purchase history; store notifications forward to RevenueCat while both run; switch when the numbers match. [Migration guide](https://revenuedot.app/docs/migrate).
-- **Leave any time.** A full export of every table, and one command to move a project between Cloud and your own server, either way.
+- **Leave any time.** A full export of every table, and one command to move a project to another RevenueDot server.
 
 ## Repositories
 
 | Repository | What it is |
 |---|---|
-| [revenuedot](https://github.com/revenuedot/revenuedot) | The server, dashboard, importer CLI, Docker, Helm and Terraform. Start here |
+| [revenuedot](https://github.com/revenuedot/revenuedot) | The server, dashboard and importer CLI. Start here |
 | [docs](https://github.com/revenuedot/docs) | Every docs page, the API reference, the help center, the blog, `llms.txt` and `llms-full.txt` |
-| [examples](https://github.com/revenuedot/examples) | 36 sample apps, webhook backends and self-host recipes, every one built and run: SwiftUI, Jetpack Compose, Flutter, React Native and Expo, Next.js, Node, Python, Go, Rust, Ruby, Java, Kotlin, Deno, Cloudflare Workers, Supabase, AWS Lambda, Firebase |
+| [examples](https://github.com/revenuedot/examples) | 36 sample apps and webhook backends, every one built and run: SwiftUI, Jetpack Compose, Flutter, React Native and Expo, Next.js, Node, Python, Go, Rust, Ruby, Java, Kotlin, Deno, Cloudflare Workers, Supabase, AWS Lambda, Firebase |
 | [mcp](https://github.com/revenuedot/mcp) | The MCP server: 38 tools for Claude, ChatGPT, Cursor and other agents |
 | [agent-skills](https://github.com/revenuedot/agent-skills) | The Claude, ChatGPT and Codex plugin, with skills that add subscriptions or migrate an app from RevenueCat |
 | [purchases-ios](https://github.com/revenuedot/purchases-ios) · [purchases-android](https://github.com/revenuedot/purchases-android) · [react-native-purchases](https://github.com/revenuedot/react-native-purchases) · [purchases-flutter](https://github.com/revenuedot/purchases-flutter) · [purchases-js](https://github.com/revenuedot/purchases-js) · [purchases-capacitor](https://github.com/revenuedot/purchases-capacitor) · [purchases-kmp](https://github.com/revenuedot/purchases-kmp) · [purchases-unity](https://github.com/revenuedot/purchases-unity) · [cordova-plugin-purchases](https://github.com/revenuedot/cordova-plugin-purchases) · [purchases-hybrid-common](https://github.com/revenuedot/purchases-hybrid-common) | The SDKs, MIT, kept in sync with upstream |
@@ -82,10 +81,10 @@ Everything RevenueDot publishes is written so that a model, or a developer with 
 
 - [llms.txt](https://revenuedot.app/llms.txt) and [llms-full.txt](https://revenuedot.app/llms-full.txt): every docs page as Markdown, one file per section under [llms/](https://github.com/revenuedot/docs/tree/main/llms).
 - [examples](https://github.com/revenuedot/examples): complete, runnable code for each platform and backend, with a header comment that links each file to the docs page it implements. Each example says what was run and against what.
-- [docs/guides](https://github.com/revenuedot/docs/tree/main/docs/guides): App Store Server Notifications v2, Google Play real-time notifications, grace periods, billing retry, refunds, family sharing, free trials, offers, webhooks, migration, self-hosting.
+- [docs/guides](https://github.com/revenuedot/docs/tree/main/docs/guides): App Store Server Notifications v2, Google Play real-time notifications, grace periods, billing retry, refunds, family sharing, free trials, offers, webhooks and migration.
 - [Help center](https://revenuedot.app/docs/help) and [blog](https://revenuedot.app/blog): one article per question developers search, with sourced numbers.
 - [MCP server](https://github.com/revenuedot/mcp) and [agent skills](https://github.com/revenuedot/agent-skills): the tools an agent uses to set up and run a RevenueDot project.
-- **Status in one sentence:** first release v2026.10.03; a real App Store sandbox purchase ran end to end on 2026-10-02; a production app has run RevenueDot beside RevenueCat since 2026-10-02; Cloud has billed real cards since 2026-10-03; self-host is free (AGPL-3.0 server, MIT SDKs) and Cloud is free up to $10,000 a month in tracked revenue, then 0.5% above that, never more than $999 a month.
+- **Status in one sentence:** first release v2026.10.03; a real App Store sandbox purchase ran end to end on 2026-10-02; a production app has run RevenueDot beside RevenueCat since 2026-10-02; Cloud has billed real cards since 2026-10-03; Cloud is free up to $10,000 a month in tracked revenue, then 0.5% above that, never more than $999 a month, and the server is AGPL-3.0 with MIT SDKs.
 
 ## Community
 
